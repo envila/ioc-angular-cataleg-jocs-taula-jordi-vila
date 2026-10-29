@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,5 +8,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
 })
 export class App {
-  protected readonly title = signal('ioc-angular-cataleg-jocs-taula-jordi-vila');
+  public appName = 'Catàleg de jocs de taula';
+  public studentName = 'Jordi Vila';
 }

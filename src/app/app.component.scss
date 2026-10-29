@@ -1,0 +1,118 @@
+
+:host {
+  display: block;
+  min-height: 100vh;
+  color: #243247;
+  background: #f3f6fa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: min(900px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.app-header {
+  padding: 1rem 0;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  color: #3566a8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  color: #183153;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.intro {
+  max-width: 650px;
+  color: #526176;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.project-card {
+  padding: 1.75rem;
+  border: 1px solid #dce4ee;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgb(30 50 80 / 6%);
+}
+
+.project-card h2,
+.project-note h2 {
+  margin-top: 0;
+  color: #183153;
+}
+
+.project-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.project-data div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.project-data dt {
+  min-width: 110px;
+  color: #526176;
+  font-weight: 700;
+}
+
+.project-data dd {
+  flex: 1;
+  margin: 0;
+}
+
+.status {
+  display: inline-block;
+  margin: 0.5rem 0 0;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  background: #e1f5e8;
+  color: #17683a;
+  font-weight: 700;
+}
+
+.project-note {
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid #5685c2;
+  border-radius: 8px;
+  background: #e8eef7;
+  line-height: 1.6;
+}
+
+.project-note p {
+  margin-bottom: 0;
+}
+
+.app-footer {
+  padding-top: 0.5rem;
+  color: #68778b;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 650px) {
+  .project-data {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2rem;
+  }
+}
