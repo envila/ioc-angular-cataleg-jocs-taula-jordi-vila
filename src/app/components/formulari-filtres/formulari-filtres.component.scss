@@ -86,3 +86,12 @@ button:disabled {
   cursor: not-allowed;
   opacity: 0.75;
 }
+
+/* Correcció de l'alineació vertical dels camps */
+.formulari-filtres .camp {
+  align-self: start;
+}
+
+.formulari-filtres .accions-filtres {
+  align-self: end;
+}

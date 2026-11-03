@@ -11,7 +11,7 @@
 
   <div class="dades-joc">
     <app-etiqueta-categoria [categoria]="joc.categoria" />
-    <span>Durada: {{ joc.duradaMinuts }} minuts</span>
-    <span>Publicació: {{ joc.dataPublicacio }}</span>
+    <span>Durada: {{ joc.duradaMinuts | number:'1.0-0' }} minuts</span>
+    <span>Publicació: {{ joc.dataPublicacio | date:'dd/MM/yyyy' }}</span>
   </div>
 </article>

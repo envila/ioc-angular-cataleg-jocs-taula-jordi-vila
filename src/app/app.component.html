@@ -43,6 +43,7 @@
 
   <section class="cataleg" aria-labelledby="cataleg-title">
     <h2 id="cataleg-title">Catàleg de jocs</h2>
+    <p class="comptador-jocs" aria-live="polite">Nombre de jocs: {{ jocsFiltrats.length }}</p>
 
     <app-formulari-filtres
       [categories]="categories"

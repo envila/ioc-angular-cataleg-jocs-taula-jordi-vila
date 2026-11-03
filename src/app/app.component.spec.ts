@@ -5,20 +5,22 @@ describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
-    })
-      .compileComponents();
+    }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('hauria de crear l’aplicació', () => {
     const fixture = TestBed.createComponent(App);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it('should render title', async () => {
+  it('hauria de mostrar el títol del catàleg', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ioc-angular-cataleg-jocs-taula-jordi-vila');
+
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Catàleg de jocs de taula',
+    );
   });
 });

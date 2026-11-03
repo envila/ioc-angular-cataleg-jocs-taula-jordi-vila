@@ -13,3 +13,22 @@
   color: #52616b;
   text-align: center;
 }
+
+/* Botó accessible per seleccionar una targeta amb el teclat */
+.boto-targeta {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.boto-targeta:focus-visible {
+  outline: 3px solid #2878b5;
+  outline-offset: 4px;
+}
