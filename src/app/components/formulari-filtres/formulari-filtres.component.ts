@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-formulari-filtres',
@@ -25,9 +25,15 @@ export class FormulariFiltres {
     });
   }
 
-  reiniciarFiltres(): void {
+  reiniciarFiltres(formulari: NgForm): void {
     this.text = '';
     this.categoria = '';
+
+    formulari.resetForm({
+      text: '',
+      categoria: '',
+    });
+
     this.aplicarFiltres();
   }
 }

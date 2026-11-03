@@ -1,17 +1,38 @@
-<form class="formulari-filtres" (ngSubmit)="aplicarFiltres()">
+<form
+  #formulari="ngForm"
+  class="formulari-filtres"
+  (ngSubmit)="aplicarFiltres()"
+  novalidate
+>
   <div class="camp">
     <label for="cerca-joc">Cerca per nom o descripció</label>
+
     <input
       id="cerca-joc"
       type="text"
       name="text"
       [(ngModel)]="text"
+      #campText="ngModel"
       placeholder="Ex. Catan"
+      required
+      minlength="3"
+      aria-describedby="error-text"
     />
+
+    @if (campText.invalid && (campText.dirty || campText.touched)) {
+      <p id="error-text" class="missatge-error" role="alert">
+        @if (campText.errors?.['required']) {
+          El camp de cerca és obligatori.
+        } @else if (campText.errors?.['minlength']) {
+          Cal introduir un mínim de 3 caràcters.
+        }
+      </p>
+    }
   </div>
 
   <div class="camp">
     <label for="categoria-joc">Categoria</label>
+
     <select
       id="categoria-joc"
       name="categoria"
@@ -25,8 +46,15 @@
   </div>
 
   <div class="accions-filtres">
-    <button type="submit">Aplicar filtres</button>
-    <button type="button" class="boto-secundari" (click)="reiniciarFiltres()">
+    <button type="submit" [disabled]="formulari.invalid">
+      Aplicar filtres
+    </button>
+
+    <button
+      type="button"
+      class="boto-secundari"
+      (click)="reiniciarFiltres(formulari)"
+    >
       Reiniciar
     </button>
   </div>

@@ -68,3 +68,21 @@ button:focus-visible {
   outline: 3px solid #2878b5;
   outline-offset: 3px;
 }
+
+.missatge-error {
+  margin: 0.2rem 0 0;
+  color: #b42318;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: #b42318;
+}
+
+button:disabled {
+  background-color: #9aaab5;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 0.75;
+}
