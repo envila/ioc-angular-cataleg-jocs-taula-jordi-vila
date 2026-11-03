@@ -1,0 +1,70 @@
+.formulari-filtres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  align-items: end;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #dce3e8;
+  border-radius: 12px;
+  background-color: #f7f9fb;
+}
+
+.camp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  color: #243447;
+  font-weight: 600;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #9aaab5;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #243447;
+  font: inherit;
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #2878b5;
+  outline-offset: 2px;
+}
+
+.accions-filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+button {
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background-color: #174b70;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boto-secundari {
+  background-color: #52616b;
+}
+
+button:hover {
+  filter: brightness(1.12);
+}
+
+button:focus-visible {
+  outline: 3px solid #2878b5;
+  outline-offset: 3px;
+}

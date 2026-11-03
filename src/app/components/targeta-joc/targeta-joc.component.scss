@@ -1,0 +1,53 @@
+.targeta-joc {
+  height: 100%;
+  padding: 1.25rem;
+  border: 1px solid #dce3e8;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+}
+
+.capcalera-targeta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+h3 {
+  margin: 0;
+  color: #243447;
+  font-size: 1.2rem;
+}
+
+.etiqueta-destacat {
+  flex-shrink: 0;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  background-color: #fff1c2;
+  color: #704d00;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.descripcio {
+  color: #52616b;
+  line-height: 1.5;
+}
+
+.dades-joc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  color: #394b59;
+  font-size: 0.9rem;
+}
+
+.categoria {
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background-color: #e8f1f8;
+  color: #174b70;
+  font-weight: 600;
+}

@@ -1,0 +1,17 @@
+<article class="targeta-joc">
+  <div class="capcalera-targeta">
+    <h3>{{ joc.titol }}</h3>
+
+    @if (joc.destacat) {
+      <span class="etiqueta-destacat">Destacat</span>
+    }
+  </div>
+
+  <p class="descripcio">{{ joc.descripcio }}</p>
+
+  <div class="dades-joc">
+    <app-etiqueta-categoria [categoria]="joc.categoria" />
+    <span>Durada: {{ joc.duradaMinuts }} minuts</span>
+    <span>Publicació: {{ joc.dataPublicacio }}</span>
+  </div>
+</article>

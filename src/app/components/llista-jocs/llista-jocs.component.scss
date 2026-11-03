@@ -1,0 +1,15 @@
+.llista-jocs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.missatge-buit {
+  grid-column: 1 / -1;
+  padding: 2rem;
+  border: 1px dashed #9aaab5;
+  border-radius: 12px;
+  color: #52616b;
+  text-align: center;
+}

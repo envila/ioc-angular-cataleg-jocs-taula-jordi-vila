@@ -1,0 +1,33 @@
+<form class="formulari-filtres" (ngSubmit)="aplicarFiltres()">
+  <div class="camp">
+    <label for="cerca-joc">Cerca per nom o descripció</label>
+    <input
+      id="cerca-joc"
+      type="text"
+      name="text"
+      [(ngModel)]="text"
+      placeholder="Ex. Catan"
+    />
+  </div>
+
+  <div class="camp">
+    <label for="categoria-joc">Categoria</label>
+    <select
+      id="categoria-joc"
+      name="categoria"
+      [(ngModel)]="categoria"
+    >
+      <option value="">Totes les categories</option>
+      @for (cat of categories; track cat) {
+        <option [value]="cat">{{ cat }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="accions-filtres">
+    <button type="submit">Aplicar filtres</button>
+    <button type="button" class="boto-secundari" (click)="reiniciarFiltres()">
+      Reiniciar
+    </button>
+  </div>
+</form>

@@ -1,0 +1,10 @@
+<section class="llista-jocs" aria-label="Catàleg de jocs de taula">
+  @for (joc of jocs; track joc.id) {
+    <app-targeta-joc
+      [joc]="joc"
+      (click)="seleccionarJoc(joc)"
+    />
+  } @empty {
+    <p class="missatge-buit">No s'han trobat jocs de taula.</p>
+  }
+</section>

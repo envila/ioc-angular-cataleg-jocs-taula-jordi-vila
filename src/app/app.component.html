@@ -1,14 +1,15 @@
+<a class="skip-link" href="#contingut-principal">Salta al contingut principal</a>
 
-<main class="app-container">
+<main class="app-container" id="contingut-principal">
   <header class="app-header">
-    <p class="eyebrow">EL MEU PROJECTE · EAC1</p>
+    <p class="eyebrow">EL MEU PROJECTE · EAC2</p>
 
     <h1>{{ appName }}</h1>
 
     <p class="intro">
       Hola, soc {{ studentName }}. Aquest projecte neix de l'interès
       pels jocs de taula i de la idea de tenir un espai on consultar-los,
-      organitzar-los i inclus valorar-los de forma personalitzada.
+      organitzar-los i inclús valorar-los de forma personalitzada.
     </p>
   </header>
 
@@ -38,6 +39,29 @@
     </dl>
 
     <p class="status">Projecte base llest - hot reload verificat</p>
+  </section>
+
+  <section class="cataleg" aria-labelledby="cataleg-title">
+    <h2 id="cataleg-title">Catàleg de jocs</h2>
+
+    <app-formulari-filtres
+      [categories]="categories"
+      (filtresAplicats)="aplicarFiltres($event)"
+    />
+
+    <app-llista-jocs
+      [jocs]="jocsFiltrats"
+      (jocSeleccionat)="seleccionarJoc($event)"
+    />
+
+    @if (jocSeleccionat) {
+      <section class="detall-joc" aria-labelledby="detall-title">
+        <h2 id="detall-title">Detall del joc seleccionat</h2>
+        <h3>{{ jocSeleccionat.titol }}</h3>
+        <p>{{ jocSeleccionat.descripcio }}</p>
+        <p>Categoria: {{ jocSeleccionat.categoria }}</p>
+      </section>
+    }
   </section>
 
   <aside class="project-note">
