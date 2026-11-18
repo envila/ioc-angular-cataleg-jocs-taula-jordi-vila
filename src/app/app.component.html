@@ -1,4 +1,7 @@
-<a class="skip-link" href="#contingut-principal">Salta al contingut principal</a>
+
+<a class="skip-link" href="#contingut-principal">
+  Salta al contingut principal
+</a>
 
 <main class="app-container" id="contingut-principal">
   <header class="app-header">
@@ -38,12 +41,33 @@
       </div>
     </dl>
 
-    <p class="status">Projecte base llest - hot reload verificat</p>
+    <p class="status">
+      Projecte base llest - hot reload verificat
+    </p>
   </section>
 
   <section class="cataleg" aria-labelledby="cataleg-title">
     <h2 id="cataleg-title">Catàleg de jocs</h2>
-    <p class="comptador-jocs" aria-live="polite">Nombre de jocs: {{ jocsFiltrats.length }}</p>
+
+    @if (carregant) {
+      <p class="missatge-carrega" role="status">
+        Carregant els jocs de taula...
+      </p>
+    }
+
+    @if (errorCarrega) {
+      <div class="missatge-error" role="alert">
+        <p>{{ errorCarrega }}</p>
+
+        <button type="button" (click)="reintentar()">
+          Torna-ho a intentar
+        </button>
+      </div>
+    }
+
+    <p class="comptador-jocs" aria-live="polite">
+      Nombre de jocs: {{ jocsFiltrats.length }}
+    </p>
 
     <app-formulari-filtres
       [categories]="categories"

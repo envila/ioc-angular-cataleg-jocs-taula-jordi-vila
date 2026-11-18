@@ -1,5 +1,5 @@
 export interface JocTaula {
-  id: number;
+ id: string | number;
   titol: string;
   descripcio: string;
   categoria: string;

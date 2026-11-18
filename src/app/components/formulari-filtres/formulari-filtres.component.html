@@ -1,5 +1,6 @@
+
 <form
-  #formulari="ngForm"
+  [formGroup]="formulari"
   class="formulari-filtres"
   (ngSubmit)="aplicarFiltres()"
   novalidate
@@ -10,21 +11,27 @@
     <input
       id="cerca-joc"
       type="text"
-      name="text"
-      [(ngModel)]="text"
-      #campText="ngModel"
+      formControlName="text"
       placeholder="Ex. Catan"
-      required
-      minlength="3"
-      aria-describedby="error-text"
+      aria-describedby="error-text estat-validacio"
     />
+
+    @if (campText.pending) {
+      <p id="estat-validacio" role="status">
+        Comprovant la cerca...
+      </p>
+    }
 
     @if (campText.invalid && (campText.dirty || campText.touched)) {
       <p id="error-text" class="missatge-error" role="alert">
-        @if (campText.errors?.['required']) {
+        @if (campText.hasError('required')) {
           El camp de cerca és obligatori.
-        } @else if (campText.errors?.['minlength']) {
+        } @else if (campText.hasError('minlength')) {
           Cal introduir un mínim de 3 caràcters.
+        } @else if (campText.hasError('senseResultats')) {
+          No s'han trobat jocs que coincideixin amb la cerca.
+        } @else if (campText.hasError('errorApi')) {
+          No s'ha pogut validar la cerca. Comprova la connexió amb l'API.
         }
       </p>
     }
@@ -35,10 +42,10 @@
 
     <select
       id="categoria-joc"
-      name="categoria"
-      [(ngModel)]="categoria"
+      formControlName="categoria"
     >
       <option value="">Totes les categories</option>
+
       @for (cat of categories; track cat) {
         <option [value]="cat">{{ cat }}</option>
       }
@@ -46,16 +53,42 @@
   </div>
 
   <div class="accions-filtres">
-    <button type="submit" [disabled]="formulari.invalid">
+    <button
+      type="submit"
+      [disabled]="formulari.invalid || formulari.pending"
+    >
       Aplicar filtres
     </button>
 
     <button
       type="button"
       class="boto-secundari"
-      (click)="reiniciarFiltres(formulari)"
+      (click)="reiniciarFiltres()"
     >
       Reiniciar
     </button>
   </div>
+
+  @if (historialCerques.length > 0) {
+    <section class="historial-cerques" aria-labelledby="historial-title">
+      <h3 id="historial-title">Cerques anteriors</h3>
+
+      <ul>
+        @for (cerca of historialCerques; track $index) {
+          <li>
+            <button
+              type="button"
+              class="boto-secundari"
+              (click)="recuperarCerca(cerca)"
+            >
+              {{ cerca.text }}
+              @if (cerca.categoria) {
+                — {{ cerca.categoria }}
+              }
+            </button>
+          </li>
+        }
+      </ul>
+    </section>
+  }
 </form>

@@ -1,0 +1,113 @@
+{
+  "jocs": [
+    {
+      "id": "1",
+      "nom": "Catan",
+      "descripcio": "Joc d'estratègia basat en la construcció i el comerç de recursos.",
+      "tipus": "Estratègia",
+      "data_publicacio": "1995-01-01",
+      "durada_minuts": 90,
+      "es_destacat": true
+    },
+    {
+      "id": "2",
+      "nom": "Carcassonne",
+      "descripcio": "Joc de col·locació de peces per construir ciutats, camins i camps.",
+      "tipus": "Estratègia",
+      "data_publicacio": "2000-01-01",
+      "durada_minuts": 45,
+      "es_destacat": true
+    },
+    {
+      "id": "3",
+      "nom": "Dixit",
+      "descripcio": "Joc d'imaginació i associació d'idees a través d'il·lustracions.",
+      "tipus": "Creativitat",
+      "data_publicacio": "2008-01-01",
+      "durada_minuts": 30,
+      "es_destacat": false
+    },
+    {
+      "id": "4",
+      "nom": "Ticket to Ride",
+      "descripcio": "Joc de construcció de rutes ferroviàries entre diferents ciutats.",
+      "tipus": "Familiar",
+      "data_publicacio": "2004-01-01",
+      "durada_minuts": 60,
+      "es_destacat": true
+    },
+    {
+      "id": "5",
+      "nom": "Pandemic",
+      "descripcio": "Joc cooperatiu en què els participants han de combatre epidèmies.",
+      "tipus": "Cooperatiu",
+      "data_publicacio": "2008-01-01",
+      "durada_minuts": 45,
+      "es_destacat": false
+    },
+    {
+      "id": "6",
+      "nom": "Azul",
+      "descripcio": "Joc de col·locació de rajoles per crear composicions decoratives.",
+      "tipus": "Estratègia",
+      "data_publicacio": "2017-01-01",
+      "durada_minuts": 45,
+      "es_destacat": true
+    },
+    {
+      "id": "7",
+      "nom": "7 Wonders",
+      "descripcio": "Joc de desenvolupament de civilitzacions mitjançant la gestió de cartes.",
+      "tipus": "Estratègia",
+      "data_publicacio": "2010-01-01",
+      "durada_minuts": 30,
+      "es_destacat": false
+    },
+    {
+      "id": "8",
+      "nom": "Codenames",
+      "descripcio": "Joc d'associació de paraules i deducció per equips.",
+      "tipus": "Deducció",
+      "data_publicacio": "2015-01-01",
+      "durada_minuts": 15,
+      "es_destacat": false
+    },
+    {
+      "id": "9",
+      "nom": "Splendor",
+      "descripcio": "Joc de gestió de recursos i desenvolupament de col·leccions.",
+      "tipus": "Estratègia",
+      "data_publicacio": "2014-01-01",
+      "durada_minuts": 30,
+      "es_destacat": false
+    },
+    {
+      "id": "10",
+      "nom": "The Mind",
+      "descripcio": "Joc cooperatiu de cartes basat en la intuïció i la sincronització.",
+      "tipus": "Cooperatiu",
+      "data_publicacio": "2018-01-01",
+      "durada_minuts": 20,
+      "es_destacat": false
+    },
+    {
+      "id": "11",
+      "nom": "Kingdomino",
+      "descripcio": "Joc de construcció de territoris mitjançant peces de dòmino.",
+      "tipus": "Familiar",
+      "data_publicacio": "2016-01-01",
+      "durada_minuts": 15,
+      "es_destacat": false
+    },
+    {
+      "id": "12",
+      "nom": "Wingspan",
+      "descripcio": "Joc d'estratègia basat en la descoberta i la gestió d'ocells.",
+      "tipus": "Estratègia",
+      "data_publicacio": "2019-01-01",
+      "durada_minuts": 60,
+      "es_destacat": true
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
